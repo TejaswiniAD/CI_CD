@@ -4,8 +4,6 @@ phases:
     commands:
       - echo Logging in to Amazon ECR....
       - aws --version
-      #- $(aws ecr get-login --region ap-south-1 --no-include-email)
-      # get the below data from ecr
       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 676266512832.dkr.ecr.us-east-1.amazonaws.com
       - # Replace with this to your repository URI
       - REPOSITORY_URI=676266512832.dkr.ecr.us-east-1.amazonaws.com/tejaswinicicd
@@ -35,3 +33,12 @@ artifacts:
   files:
     - imagedefinitions.json
     - target/helloworld.jar
+
+
+
+
+
+
+
+
+
