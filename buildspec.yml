@@ -8,7 +8,7 @@ phases:
       # get the below data from ecr
       - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 676266512832.dkr.ecr.ap-south-1.amazonaws.com
       - # Replace with this to your repository URI
-      - REPOSITORY_URI=676266512832.dkr.ecr.ap-south-1.amazonaws.com/tejaswinicicd:latest
+      - REPOSITORY_URI=676266512832.dkr.ecr.ap-south-1.amazonaws.com/tejaswinicicd
       - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
   build:
     commands:
